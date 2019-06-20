@@ -1,9 +1,21 @@
-const axios=require('axios')
-require('dotenv').config()
-let apikey=process.env.nyt_api
-const nytURL="https://api.nytimes.com/svc/"
-console.log(1)
+const {fetch,alert}=window
 
-axios.get(nytURL + "&api-key=" + apikey)
-.then(response=>console.log(response))
-.catch(e=>console.log(e))
+const getarticle=_=>{
+    fetch('/')
+    .then(r=>r.json())
+    .then(article=>{
+        document.querySelector('.articleContainer').innerHTML=``
+        console.log('article gerftim')
+        article.forEach(element => {
+            let piece=document.createElement('div')
+            piece.innerHTML=`
+            <p> ${element.title}</p>
+            <button> Save Article</button>
+
+            `
+            document.querySelector('.articleContainer').append(piece)
+        })
+    })
+    .catch(e=>console.log(e))
+}
+//getarticle()
