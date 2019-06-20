@@ -8,12 +8,15 @@ console.log(nytURL + "&api-key=" + apikey)
 
 
 module.exports=app=>{
-    app.get('/',(req,res)=>{
+    app.get('/articles',(req,res)=>{
 
         axios.get(nytURL + "&api-key=" + apikey)
-            .then(response=> res.json(response.data))
+            .then(response=> 
+                {console.log(1)
+                    res.json(response.data.results)
+                })
 
-            .catch(e=>console.log(e))
+            .catch(e=>console.log(2))
 
     })
 }

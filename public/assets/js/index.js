@@ -1,7 +1,7 @@
 const {fetch,alert}=window
 
 const getarticle=_=>{
-    fetch('/')
+    fetch('/articles')
     .then(r=>r.json())
     .then(article=>{
         document.querySelector('.articleContainer').innerHTML=``
@@ -18,4 +18,4 @@ const getarticle=_=>{
     })
     .catch(e=>console.log(e))
 }
-//getarticle()
+getarticle()
