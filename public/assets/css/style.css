@@ -1,0 +1,18 @@
+.piece{
+    background-color: azure;
+    color: darkgreen;
+    border: solid  coral;
+    width: 100%;
+    margin: 20px;
+
+}
+.add{
+    background-color: darkslateblue;
+    color: antiquewhite;
+    display:inline;
+    margin-left: 45%;
+}
+.par{
+    text-align: center;
+    font-size: 300;
+}

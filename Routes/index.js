@@ -12,11 +12,11 @@ module.exports=app=>{
 
         axios.get(nytURL + "&api-key=" + apikey)
             .then(response=> 
-                {console.log(1)
+            {
                     res.json(response.data.results)
                 })
 
-            .catch(e=>console.log(2))
+            .catch(e=>console.log(e))
 
     })
 }

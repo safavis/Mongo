@@ -8,10 +8,11 @@ const getarticle=_=>{
         console.log('article gerftim')
         article.forEach(element => {
             let piece=document.createElement('div')
+            piece.className="piece"
             piece.innerHTML=`
-            <p> ${element.title}</p>
-            <button> Save Article</button>
-
+            <p class="par"> ${element.title}</p>
+            <button class="add"> Save Article</button>
+            <br></br>
             `
             document.querySelector('.articleContainer').append(piece)
         })
